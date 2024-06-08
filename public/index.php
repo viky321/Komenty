@@ -1,17 +1,37 @@
-<?php
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-use Illuminate\Http\Request;
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{{ config('app.name', 'Komenty') }}</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=Nunito">
 
-define('LARAVEL_START', microtime(true));
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-// Determine if the application is in maintenance mode...
-if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
-    require $maintenance;
-}
+</head>
+<body>
 
-// Register the Composer autoloader...
-require __DIR__.'/../vendor/autoload.php';
+<header class="site-header">
+    @include("navigation")
+    <h1 class="title logo"></h1>
+    <a href="/">Komenty</a>
+</header>
 
-// Bootstrap Laravel and handle the request...
-(require_once __DIR__.'/../bootstrap/app.php')
-    ->handleRequest(Request::capture());
+<main id="app" class="columns is-centered">
+    <section class="column is-three-fifthen">
+        @yield("content")
+    </section>
+
+    @if(session('flash'))
+        <flash-message :text="`{{ session('flash') }}`"></flash-message>
+    @endif
+</main>
+
+</body>
+</html>
+
