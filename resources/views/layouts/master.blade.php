@@ -19,7 +19,7 @@
 <header class="site-header">
     @include("navigation")
     <h1 class="title logo"></h1>
-    <a href="/">Vimma</a>
+    <a href="/">Komenty</a>
 </header>
 
 <main id="app" class="columns is-centered">
