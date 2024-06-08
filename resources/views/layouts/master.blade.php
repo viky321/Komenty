@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Vimma') }}</title>
+    <title>{{ config('app.name', 'Komenty') }}</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css?family=Nunito">
 
