@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -35,3 +36,8 @@
 </body>
 </html>
 
+=======
+# Moja webová stránka
+
+Vitajte na mojej webovej stránke. Prejdite na hlavnú stránku [tu](master.blade.php).
+>>>>>>> 710032d9a20a57a3bf0ff23d3fe898ebc2b90992
