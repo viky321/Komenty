@@ -34,20 +34,27 @@ Postup pre inštaláciu a spustenie aplikácie:
     ```sh
     php artisan migrate
     ```
-8. Spustite lokálny vývojový server:
+
+## Spustenie aplikácie
+
+Na spustenie aplikácie lokálne vykonajte nasledujúce príkazy v termináli:
+
+1. Spustite lokálny vývojový server pre PHP:
     ```sh
     php artisan serve
     ```
 
+2. V novom termináli spustite kompiláciu assetov pomocou NPM:
+    ```sh
+    npm run dev
+    ```
+
 ## Používanie
 
-Po spustení vývojového servera môžete prístup k aplikácii získať na adrese:
+Po spustení vyššie uvedených príkazov môžete prístup k aplikácii získať na adrese: http://localhost:8000
 
 ## Odkazy
 
 - [GitHub repozitár](https://github.com/viky321/Komenty)
 
 Ak chcete prezrieť kód tejto aplikácie, navštívte môj [GitHub repozitár](https://github.com/viky321/Komenty).
-
-http://127.0.0.1:8000/
-
